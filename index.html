@@ -3,115 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Tape Cassette</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Odd One Out Music Quiz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(to right, #e21564, #764ba2);
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+        .track-list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .track-item {
+            margin: 10px 0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .track-item:hover {
+            transform: scale(1.1);
+        }
+        .track-item a {
+            text-decoration: none;
+            color: #ffd700;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+        .track-item a:hover {
+            color: #ffde34;
+        }
+        .track-item i {
+            font-size: 24px;
+        }
+        .submit-btn {
+            margin-top: 40px;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Question 1</h1>
-        <a href="index.html" class="home-button">Back to Home</a>
-    </header>
-    <div class="cassetteSvg">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="57 -63.4 363.9 231.4" style="enable-background:new 57 -63.4 363.9 231.4;" xml:space="preserve">
-      <style type="text/css">
-          .st0{fill:#F8B314;}
-          .st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
-          .st2{fill:#FFFFFF;}
-          .st3{fill:#F2640D;stroke:#FFFFFF;stroke-width:2;}
-          .st4{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-          .st5{fill:none;stroke:#FFFFFF;stroke-width:2;}
-          .st6{fill:#F1F2F2;}
-          .st7{fill:#DE540F;stroke:#FFFFFF;stroke-width:2;} 
-          .st8{fill:#F2F2F2;}
-          .st9{fill:#C8530C;}
-      </style>
-      <path class="st1" d="M320.5-8.9c-24.3,0.1-43.8,19.9-43.7,44.2c0.1,24.3,19.9,43.8,44.2,43.7s43.8-19.9,43.7-44.2
-          C364.5,10.5,344.8-9,320.5-8.9L320.5-8.9z"/>
-      <polygon class="st2" points="364.7,33.3 365.6,32.9 399.8,113.3 399,113.7 "/>
-      <path class="st1" d="M153.5-32.6C111.1-32.4,77,2.2,77.2,44.5c0.2,42.4,34.8,76.5,77.1,76.3c42.4-0.2,76.5-34.8,76.3-77.1
-          C230.4,1.3,195.9-32.8,153.5-32.6L153.5-32.6z"/>
-      <g id="Ñëîé_2">
-          <g>
-              <g>
-                  <path class="st3" d="M415.5,82.1V-57c0-3-2.4-5.4-5.4-5.4H66.9c-3,0-5.4,2.4-5.4,5.4V82.9L58,85.3v55.8l3.5,3.5v17
-                      c0,3,2.4,5.4,5.4,5.4H410c3,0,5.4-2.4,5.4-5.4v-16l4.5-4.5V85.3L415.5,82.1z M399.4,109.7c0,2.5-2,4.5-4.5,4.5h-32.7
-                      c-2.5,0-5-2-5.6-4.4l-6.1-26.1c-0.6-2.4-3.1-4.4-5.6-4.4h-212c-2.5,0-5,2-5.5,4.4l-5.8,26.1c-0.5,2.4-3,4.4-5.5,4.4H83.5
-                      c-2.5,0-4.5-2-4.5-4.5V-29.6c0-2.5,2-4.5,4.5-4.5h311.4c2.5,0,4.5,2,4.5,4.5V109.7L399.4,109.7z"/>
-                  <path class="st4" d="M91.2,128.8c-0.1,0-0.2,0.2-0.3,0.3c-0.4,1.1-0.8,2.8-1.7,2.8h-5.6c-0.1,0-0.2,0.5-0.2,0.7v5
-                      c0,0.2,0.1,0.4,0.3,0.4h3.7v10.9h-3.8c-0.1,0-0.2,0.1-0.2,0.4v5.4c0,0.2,0.1,0.5,0.2,0.5h16c0.1,0,0.2-0.1,0.2-0.4v-5.5
-                      c0-0.2-0.1-0.4-0.2-0.4h-3.7v-19.7c0-0.2-0.1-0.4-0.2-0.4H91.2L91.2,128.8z"/>
-              </g>
-          </g>
-          <polygon class="st4" points="380.1,134.5 380.1,153.6 395.1,144 	"/>
-      </g>
-      <g id="Ñëîé_4">
-          <polygon class="st3" points="118.4,160.6 130.7,107.9 348.1,107.5 359.9,160.1 	"/>
-          <polygon class="st3" points="127.5,104.3 132.5,85.2 345.8,85.2 350.8,104.3 	"/>
-          <g>
-              <line class="st5" x1="206.1" y1="25.6" x2="206.1" y2="63.7"/>
-              <line class="st5" x1="214" y1="25.6" x2="214" y2="63.7"/>
-              <line class="st5" x1="222" y1="25.6" x2="222" y2="63.7"/>
-              <line class="st5" x1="229.9" y1="25.6" x2="229.9" y2="63.7"/>
-              <line class="st5" x1="237.9" y1="25.6" x2="237.9" y2="63.7"/>
-              <line class="st5" x1="245.8" y1="25.6" x2="245.8" y2="63.7"/>
-              <line class="st5" x1="253.7" y1="25.6" x2="253.7" y2="63.7"/>
-              <line class="st5" x1="261.7" y1="25.6" x2="261.7" y2="63.7"/>
-              <line class="st5" x1="269.6" y1="25.6" x2="269.6" y2="63.7"/>
-              <line class="st5" x1="277.6" y1="25.6" x2="277.6" y2="63.7"/>
-          </g>
-      </g>
-      <g id="Ñëîé_3">
-          <circle class="st6" cx="244.6" cy="45.7" r="6.8"/>
-          <circle class="st7" cx="152.5" cy="148.8" r="9.1"/>
-          <circle class="st7" cx="324.5" cy="148.8" r="9.1"/>
-          <path class="st7" d="M197.9,145.6c0,3-2.4,5.4-5.4,5.4h-5.9c-3,0-5.4-2.4-5.4-5.4v-5.9c0-3,2.4-5.4,5.4-5.4h5.9
-              c3,0,5.4,2.4,5.4,5.4V145.6z"/>
-          <path class="st7" d="M298.2,145.6c0,3-2.4,5.4-5.4,5.4h-5.9c-3,0-5.4-2.4-5.4-5.4v-5.9c0-3,2.4-5.4,5.4-5.4h5.9
-              c3,0,5.4,2.4,5.4,5.4V145.6z"/>
-          <path class="st8" d="M398.9,77.1v32.7c0,2.3-1.8,4.1-4.1,4.1h-32.7c-2.3,0-4.6-1.8-5.1-4.1l-6.1-26.1c-0.6-2.6-3.3-4.8-6-4.8h-212
-              c-2.7,0-5.4,2.1-6,4.8l-5.8,26.1c-0.5,2.2-2.8,4.1-5.1,4.1H83.4c-2.3,0-4.1-1.8-4.1-4.1V77.1h-0.5v32.7c0,2.5,2,4.5,4.5,4.5h32.6
-              c2.5,0,5-2,5.5-4.4l5.8-26.1c0.5-2.4,3-4.4,5.5-4.4h212c2.5,0,5,2,5.6,4.4l6.1,26.1c0.6,2.4,3.1,4.4,5.6,4.4h32.7
-              c2.5,0,4.5-2,4.5-4.5V77.1H398.9z"/>
-          <path class="st8" d="M79.4-29.6c0-2.3,1.8-4.1,4.1-4.1h311.4c2.3,0,4.1,1.8,4.1,4.1V77.1h0.5V-29.6c0-2.5-2-4.5-4.5-4.5H83.5
-              c-2.5,0-4.5,2-4.5,4.5V77.1h0.5L79.4-29.6L79.4-29.6z"/>
-          <path class="st8" d="M398.5,109.7c0,2-1.6,3.6-3.6,3.6h-32.7c-2.1,0-4.2-1.7-4.7-3.7l-6.1-26.1c-0.7-2.8-3.6-5.1-6.5-5.1h-212
-              c-2.9,0-5.8,2.3-6.4,5.1l-5.8,26.1c-0.4,2-2.6,3.7-4.6,3.7H83.5c-2,0-3.6-1.6-3.6-3.6V77.1h-0.5v32.7c0,2.3,1.8,4.1,4.1,4.1h32.6
-              c2.3,0,4.6-1.8,5.1-4.1l5.8-26.1c0.6-2.6,3.3-4.8,6-4.8h212c2.7,0,5.4,2.1,6,4.8l6.1,26.1c0.5,2.2,2.8,4.1,5.1,4.1h32.7
-              c2.3,0,4.1-1.8,4.1-4.1V77.1h-0.5L398.5,109.7L398.5,109.7z"/>
-          <path class="st8" d="M394.9-33.7H83.5c-2.3,0-4.1,1.8-4.1,4.1V77.1h0.5V-29.6c0-2,1.6-3.6,3.6-3.6h311.4c2,0,3.6,1.6,3.6,3.6V77.1
-              h0.5V-29.6C398.9-31.9,397.1-33.7,394.9-33.7z"/>
-          <line class="st5" x1="104.3" y1="-14.6" x2="386.7" y2="-14.6"/>
-      </g>
-      <path class="st9 stRodate" d="M188.7,34.6C188.5,15.4,172.9,0,153.6,0.1C134.4,0.3,119,16,119.2,35.2c0.2,19.2,15.8,34.6,35.1,34.5l0,0
-          C173.4,69.5,188.9,53.8,188.7,34.6L188.7,34.6z M169.8,7.8c4.7,2.8,8.7,6.8,11.4,11.5l-7.4,4.2c-2-3.5-4.8-6.4-8.3-8.4L169.8,7.8z
-           M170.5,46.4c-3.3,4.7-8.5,8-14.5,8.6l-0.1-8.5h-3.7l0.1,8.5c-6-0.5-11.3-3.7-14.7-8.3l7.4-4.3l-1.9-3.2l-7.4,4.3
-          c-1.2-2.6-1.9-5.4-1.9-8.4s0.6-5.9,1.8-8.4l7.4,4.2l1.8-3.2l-7.4-4.2c3.3-4.7,8.5-7.9,14.5-8.5l0.1,8.5h3.7l-0.1-8.5
-          c6,0.5,11.3,3.7,14.7,8.3l-7.3,4.3l1.9,3.2l7.3-4.3c1.2,2.6,1.9,5.4,1.9,8.4l0,0l0,0c0,3-0.6,5.9-1.8,8.4l-7.4-4.2l-1.8,3.2
-          L170.5,46.4z M154.1,3.6l-0.1,8.5l0,0c-4,0-7.9,1-11.4,3l-4.2-7.4C143.2,4.9,148.6,3.5,154.1,3.6z M126.9,19.1l7.4,4.3l0,0
-          c-2,3.5-3.1,7.4-3.1,11.4h-8.5C122.6,29.2,124.1,23.8,126.9,19.1z M138.1,62c-4.7-2.8-8.7-6.8-11.4-11.5l7.4-4.2
-          c2,3.5,4.8,6.4,8.3,8.4L138.1,62z M169.4,62.1c-4.8,2.7-10.2,4.1-15.7,4.1l0.1-8.5c4,0,7.9-1,11.4-3L169.4,62.1L169.4,62.1z
-           M185.3,35.1c0,5.5-1.5,10.9-4.3,15.6l-7.4-4.3c2-3.4,3.1-7.4,3.1-11.4L185.3,35.1L185.3,35.1z"/>
-      <path class="st9 stRodate2" d="M355.7,34.6C355.5,15.4,339.9,0,320.6,0.1c-19.2,0.2-34.6,15.8-34.5,35.1c0.2,19.2,15.8,34.6,35.1,34.5l0,0
-          C340.4,69.5,355.9,53.8,355.7,34.6L355.7,34.6z M336.8,7.8c4.7,2.8,8.7,6.8,11.4,11.5l-7.4,4.2c-2-3.5-4.8-6.4-8.3-8.4L336.8,7.8z
-           M337.5,46.4c-3.3,4.7-8.5,8-14.5,8.6l-0.1-8.5h-3.7l0.1,8.5c-6-0.5-11.3-3.7-14.7-8.3l7.4-4.3l-1.9-3.2l-7.4,4.3
-          c-1.2-2.6-1.9-5.4-1.9-8.4s0.6-5.9,1.8-8.4l7.4,4.2l1.8-3.2l-7.4-4.2c3.3-4.7,8.5-7.9,14.5-8.5l0.1,8.5h3.7l-0.1-8.5
-          c6,0.5,11.3,3.7,14.7,8.3l-7.3,4.3l1.9,3.2l7.3-4.3c1.2,2.6,1.9,5.4,1.9,8.4l0,0l0,0c0,3-0.6,5.9-1.8,8.4l-7.4-4.2l-1.8,3.2
-          L337.5,46.4z M321.1,3.6l-0.1,8.5l0,0c-4,0-7.9,1-11.4,3l-4.2-7.4C310.2,4.9,315.6,3.5,321.1,3.6z M293.9,19.1l7.4,4.3l0,0
-          c-2,3.5-3.1,7.4-3.1,11.4h-8.5C289.6,29.2,291.1,23.8,293.9,19.1z M305.1,62c-4.7-2.8-8.7-6.8-11.4-11.5l7.4-4.2
-          c2,3.5,4.8,6.4,8.3,8.4L305.1,62z M336.4,62.1c-4.8,2.7-10.2,4.1-15.7,4.1l0.1-8.5c4,0,7.9-1,11.4-3L336.4,62.1L336.4,62.1z
-           M352.3,35.1c0,5.5-1.5,10.9-4.3,15.6l-7.4-4.3c2-3.4,3.1-7.4,3.1-11.4L352.3,35.1L352.3,35.1z"/>
-          
-      </svg>
 
-      </div>
- <!-- Separate Play Button -->
- <div class="play-button">
-    <div class="play-btn-symbol"></div>
-</div>
-<audio id="audio" src="music/question1.mp3"></audio>
-<script src="script.js"></script>
+    <h1>Odd One Out Music Quiz</h1>
+    <p>Listen to the 4 music tracks below and pick the odd one out.</p>
+
+    <div class="track-list">
+        <div class="track-item"><i class="fas fa-music"></i><a href="question1.html">Track 1</a></div>
+        <div class="track-item"><i class="fas fa-music"></i><a href="track2.mp3" target="_blank">Track 2</a></div>
+        <div class="track-item"><i class="fas fa-music"></i><a href="track3.mp3" target="_blank">Track 3</a></div>
+        <div class="track-item"><i class="fas fa-music"></i><a href="track4.mp3" target="_blank">Track 4</a></div>
+    </div>
+
+ 
 
 </body>
 </html>
