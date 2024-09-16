@@ -32,7 +32,7 @@ header h1 {
 .home-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2C6B56;
+    background-color: #8C4B4B;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -42,12 +42,12 @@ header h1 {
 }
 
 .home-button:hover {
-    background-color: #1c4336;
+    background-color: #A37C5E;
 }
 
 .home-button:active {
     transform: translateY(2px);
-    box-shadow: 0 4px #2C6B56;
+    box-shadow: 0 4px #8C4B4B;
 }
 
 
@@ -91,14 +91,14 @@ header h1 {
 .play-button {
     width: 60px;
     height: 60px;
-    background-color: #2C6B56;
+    background-color: #8C4B4B;
     border: 2px solid #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 8px #1c4336, 0 15px 20px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    box-shadow: 0 8px #A37C5E, 0 15px 20px rgba(0, 0, 0, 0.2); /* 3D shadow */
     transition: all 0.1s ease-in-out;
 }
 
@@ -119,10 +119,10 @@ header h1 {
 }
 
 .play-button:hover {
-    background-color: #1c4336; /* Darken on hover */
+    background-color: #A37C5E; /* Darken on hover */
 }
 
 .play-button:active {
     transform: translateY(5px); /* Simulate press */
-    box-shadow: 0 3px #1c4336, 0 6px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow for pressed effect */
+    box-shadow: 0 3px #A37C5E, 0 6px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow for pressed effect */
 }
