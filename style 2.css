@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header styling */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 8px #3d78bb;
+    
+    transition: background-color 0.3s ease, transform 0.1s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #3d78bb;
+}
+
+.home-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px #4A90E2;
+}
+
+
+
+.cassetteSvg {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cassetteSvg svg {
+    width: 100%;
+}
+
+.cassetteSvg .stRodate,
+.cassetteSvg .stRodate2 {
+    transform-origin: center;
+    animation: none; /* Default is no animation */
+}
+
+.cassetteSvg.active .stRodate {
+    transform-origin: 154px 35px 0;
+    animation: stRodate 2.8s linear infinite;
+}
+
+.cassetteSvg.active .stRodate2 {
+    transform-origin: 321px 35px 0;
+    animation: stRodate 2s linear infinite;
+}
+
+@keyframes stRodate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    background-color: #4A90E2;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px #3d78bb, 0 15px 20px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    transition: all 0.1s ease-in-out;
+}
+
+.play-btn-symbol {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #ffffff;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.play-button.stop .play-btn-symbol {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: none; /* Remove any default border */
+    border-radius: 4px; /* Rounded corners to make it look more like a button */
+}
+
+.play-button:hover {
+    background-color: #3d78bb; /* Darken on hover */
+}
+
+.play-button:active {
+    transform: translateY(5px); /* Simulate press */
+    box-shadow: 0 3px #3d78bb, 0 6px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow for pressed effect */
+}
