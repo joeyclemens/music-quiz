@@ -124,5 +124,5 @@ header h1 {
 
 .play-button:active {
     transform: translateY(5px); /* Simulate press */
-    box-shadow: 0 3px #A37C5E, 0 6px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow for pressed effect */
+    box-shadow: 0 3px #8C4B4B, 0 6px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow for pressed effect */
 }
